@@ -1,0 +1,1 @@
+"""Tänne Nopat-luokka, jolla funktio, joka arpoo silmäluvut"""
