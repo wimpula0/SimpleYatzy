@@ -1,0 +1,1 @@
+"""Tänne funktio, joka laskee pisteet yhteen."""
