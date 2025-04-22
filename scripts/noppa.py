@@ -29,8 +29,3 @@ def noppien_vaihto(nopat):
     print("Uudet nopat: ", nopat)
     return nopat
             
-
-
-
-
-noppien_vaihto(noppien_heitto())
