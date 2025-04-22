@@ -1,4 +1,4 @@
-"""Täällä funktio, joka arpoo noppien silmäluvut"""
+"""Täällä funktio, joka arpoo noppien silmäluvut ja heittää valitut nopat uudelleen"""
 
 import random
 
@@ -12,6 +12,7 @@ def noppien_heitto():
     print(f"Heitetyt nopat: {nopat}")
     return nopat
 
+
 def noppien_vaihto(nopat):
     """Heittää käyttäjän valitsemat nopat uudelleen."""
     vaihdettavat_nopat = []
@@ -20,13 +21,12 @@ def noppien_vaihto(nopat):
     for i in vaihto:
         if i.isdigit():
             vaihdettavat_nopat.append(int(i))
+
+    for i in vaihdettavat_nopat:
+        if 1 <= i <= len(nopat):
+            nopat[i - 1] = random.randint(1,6)
     
-    # Pitää vielä vaihtaa valitut nopat uusiin rand. lukuihin:
-    # for i in vaihdettavat:
-    #   nopat[vaihdettavat[i]] = rand.randint(1,6) or something??
-
-
-    print(vaihdettavat_nopat)
+    print("Uudet nopat: ", nopat)
     return nopat
             
 
