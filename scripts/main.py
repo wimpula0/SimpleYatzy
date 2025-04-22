@@ -27,11 +27,10 @@ def main():
     print("-" * 80)
     print("")
     print("Ohjeet:")
-    print(" Peliä pelaa kaksi pelaajaa vuorotellen")
-    print("- Jokaisella vuorolla voit heittää noppia kerran")
-    print("- Voit vaihtaa haluamasi nopat uudelleenheitolle")
+    print("- Peliä pelaa kaksi pelaajaa vuorotellen")
+    print("- Jokaisella vuorolla noppia voi heittää kaksi kertaa")
     print("- Peli kestää 5 kierrosta")
-    print("- Eniten pisteitä kerännyt voittaa\n")
+    print("- Eniten pisteitä kerännyt voittaa! :)\n")
     
     for kierros in range(1, 6):
         print(f"\n--- Kierros {kierros} ---")
@@ -44,11 +43,11 @@ def main():
         print(f"Pelaajan {i+1} kokonaispisteet: {pisteet}")
     
     if pelaajien_pisteet[0] > pelaajien_pisteet[1]:
-        print("Pelaaja 1 voitti!")
+        print("Pelaaja 1 voitti! :D")
     elif pelaajien_pisteet[1] > pelaajien_pisteet[0]:
-        print("Pelaaja 2 voitti!")
+        print("Pelaaja 2 voitti! :D")
     else:
-        print("Tasapeli!")
+        print("Tasapeli! :3")
 
 if __name__ == "__main__":
     main()
