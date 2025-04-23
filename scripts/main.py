@@ -5,13 +5,17 @@ from laskut import noppien_tarkistus
 
 
 def pelaa_vuoro(pelaaja_numero):
-    print(f"\nPelaajan {pelaaja_numero} vuoro:")
+    print(f"\nPelaajan {pelaaja_numero} vuoro:\n")
     nopat = noppien_heitto()
+    a = 0
     
-    # Mahdollisuus vaihtaa noppia kerran
-    vaihto = input("Haluatko vaihtaa noppia? (k/e): ").lower()
-    if vaihto == 'k':
-        nopat = noppien_vaihto(nopat)
+    while a < 2:
+        vaihto = input("Haluatko vaihtaa noppia? (k/e): ").lower()
+        if vaihto == 'k':
+            nopat = noppien_vaihto(nopat)
+        elif vaihto == 'e':
+            break
+        a += 1
     
     pisteet = noppien_tarkistus(nopat)
     print(f"Sait {pisteet} pistettä!")
@@ -28,12 +32,17 @@ def main():
     print("")
     print("Ohjeet:")
     print("- Peliä pelaa kaksi pelaajaa vuorotellen")
-    print("- Jokaisella vuorolla noppia voi heittää kaksi kertaa")
-    print("- Peli kestää 5 kierrosta")
-    print("- Eniten pisteitä kerännyt voittaa! :)\n")
-    
-    for kierros in range(1, 6):
-        print(f"\n--- Kierros {kierros} ---")
+    print("- Jokaisella vuorolla noppia voi heittää uudestaan kaksi kertaa")
+    print("- Peli kestää 3 kierrosta")
+    print("- Eniten pisteitä kerännyt voittaa! :)")
+    print("")
+    print("-" * 80)
+    print("")
+
+    for kierros in range(1, 4):
+        kierros_title = f"--- KIERROS {kierros} ---"
+        kier = kierros_title.center(80)
+        print(kier)
         for pelaaja in range(2):
             pelaajien_pisteet[pelaaja] += pelaa_vuoro(pelaaja + 1)
     

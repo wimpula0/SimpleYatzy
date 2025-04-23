@@ -5,13 +5,13 @@ def noppien_tarkistus(nopat):
     pisteet = 0
     kombinaatiot = {
         'yatzy': False,
-        'mokki': False,
-        'p_suora': False,
-        'i_suora': False,
-        'neljä_samaa': False,
-        'kolme_samaa': False,
+        'mökki': False,
+        'pieni suora': False,
+        'iso suora': False,
+        'neljä samaa': False,
+        'kolme samaa': False,
         'pari': False,
-        'kaksi_paria': False
+        'kaksi paria': False
     }
 
     silmaluvut = [0] * 7  
@@ -24,23 +24,23 @@ def noppien_tarkistus(nopat):
         kombinaatiot['yatzy'] = True
         pisteet += 50
     elif 3 in silmaluvut and 2 in silmaluvut:
-        kombinaatiot['mokki'] = True
+        kombinaatiot['mökki'] = True
         pisteet += 25
     elif sorted(nopat) == [1, 2, 3, 4, 5]:
-        kombinaatiot['p_suora'] = True
+        kombinaatiot['pieni suora'] = True
         pisteet += 15
     elif sorted(nopat) == [2, 3, 4, 5, 6]:
-        kombinaatiot['i_suora'] = True
+        kombinaatiot['iso suora'] = True
         pisteet += 20
     elif 4 in silmaluvut:
-        kombinaatiot['neljä_samaa'] = True
+        kombinaatiot['neljä samaa'] = True
         pisteet += sum(nopat)
     elif 3 in silmaluvut:
-        kombinaatiot['kolme_samaa'] = True
+        kombinaatiot['kolme samaa'] = True
         pisteet += sum(nopat)
     else:
         if len(parit) >= 2:
-            kombinaatiot['kaksi_paria'] = True
+            kombinaatiot['kaksi paria'] = True
             pisteet += sum(p * 2 for p in parit[-2:])
         elif len(parit) == 1:
             kombinaatiot['pari'] = True
