@@ -1,3 +1,6 @@
+# R3
+# Väyrynen Vilma
+
 """Tänne actual peli"""
 
 from noppa import noppien_heitto, noppien_vaihto

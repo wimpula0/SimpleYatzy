@@ -1,3 +1,6 @@
+# R3
+# Väyrynen Vilma
+
 """Tänne funktio, joka laskee pisteet yhteen sekä funktio, joka tarkistaa nopat"""
 
 

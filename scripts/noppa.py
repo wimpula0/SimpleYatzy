@@ -1,3 +1,5 @@
+# R3
+# Väyrynen Vilma
 """Täällä funktio, joka arpoo noppien silmäluvut ja heittää valitut nopat uudelleen"""
 
 import random
